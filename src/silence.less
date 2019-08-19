@@ -18,6 +18,15 @@ a {
     }
 }
 
+a {
+    transition: all 0.3s ease !important;
+
+    &:hover {
+        color: @blog-theme-color  !important;
+        text-decoration: none !important;
+    }
+}
+
 /* 隐藏 DOM */
 
 .blogStats,
@@ -496,7 +505,7 @@ a {
 
         strong {
             margin: 0 3px;
-            font-weight: 500;
+            font-weight: bold;
         }
 
         img {
@@ -553,7 +562,7 @@ a {
         p code,
         li code,
         table code {
-            color: @blog-font-color;
+            color: @blog-code-color;
             line-height: 1;
             font-family: consolas !important;
             vertical-align: middle;
@@ -689,6 +698,18 @@ a {
 .cnblogs-markdown pre {
     white-space: pre !important;
     position: relative !important;
+}
+
+.cnblogs-markdown p a {
+
+    &:link,
+    &:visited,
+    &:active,
+    &:hover {
+        color: @blog-p-a-color  !important;
+        // font-weight: bold;
+        // text-decoration: none !important;
+    }
 }
 
 /* 标签列表 */
@@ -1012,12 +1033,62 @@ a {
 
     p {
         margin: 0 !important;
+
+        a {
+
+            &:link,
+            &:visited,
+            &:active {
+                color: @blog-font-color  !important;
+            }
+        }
+    }
+
+
+}
+
+/* 红色提示 */
+
+.esa-post-red-tip {
+    padding: 12px 24px 12px 30px;
+    margin-top: 15px;
+    margin-left: 5px;
+    border-left-width: 4px;
+    font-size: 15px;
+    line-height: 2;
+    border-left-style: solid;
+    background-color: @post-red-tip-bg-color;
+    position: relative;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+    border-left-color: @post-red-tip-color;
+    z-index: 1;
+
+    &:before {
+        content: "!";
+        background-color: @post-red-tip-color;
+        position: absolute;
+        top: 25px;
+        left: -12px;
+        color: #fff;
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        text-align: center;
+        line-height: 20px;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    p {
+        margin: 0 !important;
     }
 
     a {
         color: @blog-font-color  !important;
     }
 }
+
 
 /* 消息 */
 
