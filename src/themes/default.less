@@ -10,7 +10,8 @@
 
 @post-catalog-bg-color: #fff;
 @post-catalog-font-color: #929aa2;
-@post-table-thead-bg-color: #f7f7f7;
+// @post-table-thead-bg-color: #f7f7f7;
+@post-table-thead-bg-color: #fff;
 @post-table-border-color: #eef2f8;
 @post-inline-code-bg-color: #f2f4f5;
 @post-inline-code-border-color: #eee;
@@ -18,6 +19,7 @@
 @post-cnblogs-code-font-color: #656c73;
 @post-signature-bg-color: #f8f8f8;
 @post-blockquote-border-color: #42b983;
+@post-blockquote-bg-color:#f8f8f8;
 @comment-font-color: #434b69;
 @comment-bg-color: rgba(193, 193, 193, .2);
 
@@ -95,77 +97,178 @@
     text-decoration: underline;
 }
 
-/*-----------cs-----------------*/
-.cnblogs-markdown > .cs {
+/*-----------vs-style-----------------*/
 
+.cnblogs-markdown .xml,
+.cnblogs-markdown .css,
+.cnblogs-markdown .sql,
+.cnblogs-markdown .cs {
     .hljs {
         display: block;
-        color: #333;
         overflow-x: auto;
-        background: #F2F4F5 !important;
-        border: none !important;
-        font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace !important;
-        padding: 1em !important;
-        font-size: 14px !important;
+        padding: .5em;
+        // background: white;
+        color: black
     }
     
-    .hljs-comment,
-    .hljs-meta {
-        color: #969896;
+    .hljs-comment,.hljs-quote,.hljs-variable {
+        color: #008000
     }
     
-    .hljs-string,
-    .hljs-variable,
-    .hljs-template-variable,
-    .hljs-strong,
-    .hljs-emphasis,
-    .hljs-quote {
-        color: #df5000;
+    .hljs-keyword,.hljs-selector-tag,.hljs-built_in,.hljs-name,.hljs-tag {
+        color: #00f
     }
     
-    .hljs-keyword,
-    .hljs-selector-tag,
-    .hljs-type {
-        color: #00f;
+    .hljs-string,.hljs-section,.hljs-attribute,.hljs-literal,.hljs-template-tag,.hljs-template-variable,.hljs-type,.hljs-addition
+    ,.hljs-meta-string {
+        color: #a31515
     }
     
-    .hljs-literal,
-    .hljs-symbol,
-    .hljs-bullet,
-    .hljs-attribute {
-        color: #0086b3;
+    .hljs-title,.hljs-deletion,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-meta {
+        color: #2b91af
     }
     
-    .hljs-section,
-    .hljs-name {
-        color: #63a35c;
+    .hljs-doctag {
+        color: #808080
     }
     
-    .hljs-tag {
-        color: #333333;
+    .hljs-attr {
+        color: #f00
     }
     
-    .hljs-title,
-    .hljs-attr,
-    .hljs-selector-id,
-    .hljs-selector-class,
-    .hljs-selector-attr,
-    .hljs-selector-pseudo {
-        color: #795da3;
+    .hljs-symbol,.hljs-bullet,.hljs-link {
+        color: #00b0e8
     }
     
-    .hljs-addition {
-        color: #55a532;
-        background-color: #eaffea;
+    .hljs-emphasis {
+        font-style: italic
     }
     
-    .hljs-deletion {
-        color: #bd2c00;
-        background-color: #ffecec;
+    .hljs-strong {
+        font-weight: bold
+    }
+}
+
+
+/*-----------javascript--atom-one-dark-----------------*/
+.cnblogs-markdown .js,
+.cnblogs-markdown .javascript,
+.cnblogs-markdown .html
+{
+    .hljs {
+        display: block;
+        overflow-x: auto;
+        padding: .5em;
+        color: #abb2bf;
+        background: #282c34 !important;
+    }
+    
+    .hljs-comment,.hljs-quote {
+        color: #5c6370;
+        font-style: italic
+    }
+    
+    .hljs-doctag,.hljs-keyword,.hljs-formula {
+        color: #c678dd
+    }
+    
+    .hljs-section,.hljs-name,.hljs-selector-tag,.hljs-deletion,.hljs-subst {
+        color: #e06c75
+    }
+    
+    .hljs-literal {
+        color: #56b6c2
+    }
+    
+    .hljs-string,.hljs-regexp,.hljs-addition,.hljs-attribute,.hljs-meta-string {
+        color: #98c379
+    }
+    
+    .hljs-built_in,.hljs-class .hljs-title {
+        color: #e6c07b
+    }
+    
+    .hljs-attr,.hljs-variable,.hljs-template-variable,.hljs-type,.hljs-selector-class,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-number {
+        color: #d19a66
+    }
+    
+    .hljs-symbol,.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-title {
+        color: #61aeee
+    }
+    
+    .hljs-emphasis {
+        font-style: italic
+    }
+    
+    .hljs-strong {
+        font-weight: bold
     }
     
     .hljs-link {
-        text-decoration: underline;
+        text-decoration: underline
     }
     
-} 
+}
+
+/*-----------ini---------------*/
+.cnblogs-markdown .ini {
+
+    .hljs {
+        display: block;
+        overflow-x: auto;
+        padding: .5em;
+        background: #002b36 !important;
+        color: #839496
+    }
+    
+    .hljs-comment,.hljs-quote {
+        color: #586e75
+    }
+    
+    .hljs-keyword,.hljs-selector-tag,.hljs-addition {
+        color: #859900
+    }
+    
+    .hljs-number,.hljs-string,.hljs-meta .hljs-meta-string,.hljs-literal,.hljs-doctag,.hljs-regexp {
+        color: #2aa198
+    }
+    
+    .hljs-title,.hljs-section,.hljs-name,.hljs-selector-id,.hljs-selector-class {
+        color: #268bd2
+    }
+    
+    .hljs-attribute,.hljs-attr,.hljs-variable,.hljs-template-variable,.hljs-class .hljs-title,.hljs-type {
+        color: #b58900
+    }
+    
+    .hljs-symbol,.hljs-bullet,.hljs-subst,.hljs-meta,.hljs-meta .hljs-keyword,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-link {
+        color: #cb4b16
+    }
+    
+    .hljs-built_in,.hljs-deletion {
+        color: #dc322f
+    }
+    
+    .hljs-formula {
+        background: #073642
+    }
+    
+    .hljs-emphasis {
+        font-style: italic
+    }
+    
+    .hljs-strong {
+        font-weight: bold
+    }
+    
+}
+/*-----------ini---------------*/
+.cnblogs-markdown .cmd {
+    .hljs {
+        color: #BFC0C3;
+        background-color: #282C34!important;
+    }
+    .hljs-title,.hljs-built_in,.hljs-keyword{
+        color: #BFC0C3;
+    }
+}

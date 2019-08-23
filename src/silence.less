@@ -437,7 +437,7 @@ a {
 
     .postBody {
         font-weight: 300;
-        font-size: 16px;
+        font-size: 15px;
         padding: 5px 15px;
         line-height: 1.75;
         color: @blog-font-color;
@@ -497,6 +497,7 @@ a {
             background: transparent;
             line-height: inherit;
             border-left: 4px solid @post-blockquote-border-color;
+            background-color: @post-blockquote-bg-color;
         }
 
         em {
@@ -910,8 +911,9 @@ a {
 
 .esa-catalog {
     position: fixed;
-    top: 120px;
-    right: 1px;
+    top: 61px;
+    // right: 1px;
+    left: 76%;
     width: auto;
     height: auto;
     z-index: 1000;
@@ -955,12 +957,12 @@ a {
 
     ul {
         padding: 10px 15px;
-        max-height: 350px;
+        max-height: 650px;
         overflow-y: auto;
 
         li {
             margin-top: 5px;
-            max-width: 240px;
+            max-width: 260px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
