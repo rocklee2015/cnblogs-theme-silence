@@ -3,40 +3,44 @@
 @blog-bg-color: #fff;
 @blog-theme-color: #2D8CF0;
 @blog-border-color: #eef2f8;
-@blog-font-color: #314659;
+// @blog-font-color: #314659;
+@blog-font-color: #000000;
 @blog-title-color: #404040;
 @blog-github-fill-color: #2D8CF0;
-@blog-code-color:#d63200;
+// @blog-code-color:#d63200;
+@blog-code-color:#ff502c;
 
 @post-catalog-bg-color: #fff;
 @post-catalog-font-color: #929aa2;
-// @post-table-thead-bg-color: #f7f7f7;
-@post-table-thead-bg-color: #fff;
+@post-table-thead-bg-color: #f7f7f7;
+// @post-table-thead-bg-color: #fff;
 @post-table-border-color: #eef2f8;
-@post-inline-code-bg-color: #f2f4f5;
-@post-inline-code-border-color: #eee;
-@post-cnblogs-code-bg-color: #f2f4f5;
-@post-cnblogs-code-font-color: #656c73;
+@post-inline-code-bg-color: #fff5f5;
+@post-inline-code-border-color: #fff5f5;
+@post-cnblogs-code-bg-color: #fff5f5;
+@post-cnblogs-code-font-color: #fff5f5;
 @post-signature-bg-color: #f8f8f8;
-@post-blockquote-border-color: #42b983;
+@post-blockquote-border-color: #cbcbcb;
 @post-blockquote-bg-color:#f8f8f8;
 @comment-font-color: #434b69;
 @comment-bg-color: rgba(193, 193, 193, .2);
 
 @post-red-tip-color: #f66;
 @post-red-tip-bg-color:#f2f4f5;
-@blog-p-a-color:#42b983;
+@blog-p-a-color:#2D8CF0;
 
 .cnblogs-markdown .hljs {
     display: block;
     color: #333;
     overflow-x: auto;
-    background: #F2F4F5 !important;
+    background: #F2F4F5;
     border: none !important;
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace !important;
+    // font-family: Segoe UI,SegoeUI,Segoe WP,Helvetica Neue,Helvetica,Tahoma,Arial,sans-serif ;
     padding: 1em !important;
     font-size: 14px !important;
 }
+
 
 .hljs-comment,
 .hljs-meta {
@@ -99,10 +103,10 @@
 
 /*-----------vs-style-----------------*/
 
-.cnblogs-markdown .xml,
-.cnblogs-markdown .css,
-.cnblogs-markdown .sql,
-.cnblogs-markdown .cs {
+.cnblogs-markdown .language-xml,
+.cnblogs-markdown .language-css,
+.cnblogs-markdown .language-sql,
+.cnblogs-markdown .language-cs {
     .hljs {
         display: block;
         overflow-x: auto;
@@ -151,9 +155,9 @@
 
 
 /*-----------javascript--atom-one-dark-----------------*/
-.cnblogs-markdown .js,
-.cnblogs-markdown .javascript,
-.cnblogs-markdown .html
+.cnblogs-markdown .language-js,
+.cnblogs-markdown .language-javascript,
+.cnblogs-markdown .language-html
 {
     .hljs {
         display: block;
@@ -213,7 +217,7 @@
 }
 
 /*-----------ini---------------*/
-.cnblogs-markdown .ini {
+.cnblogs-markdown .language-ini {
 
     .hljs {
         display: block;
@@ -264,13 +268,24 @@
     }
     
 }
-/*-----------ini---------------*/
-.cnblogs-markdown .cmd {
-    .hljs {
-        color: #BFC0C3;
-        background-color: #282C34!important;
+/*-----------dos---------------*/
+.cnblogs-markdown .language-cmd,
+.cnblogs-markdown .language-dos {
+    color: #ddd;
+    background-color: #272822!important;
+    .hljs-built_in{
+        color: #a6e22e;
     }
-    .hljs-title,.hljs-built_in,.hljs-keyword{
-        color: #BFC0C3;
+    .hljs-title{
+        color:#ddd;
     }
+}
+/*-----------bash---------------*/
+.cnblogs-markdown .language-bash {
+    color: #ddd;
+    background-color: #272822!important;
+    .hljs-built_in{
+        color: #a6e22e;
+    }
+    
 }

@@ -361,6 +361,7 @@ a {
     padding-left: 0;
 
     .c_b_p_desc {
+        display: none;
         img {
             // height: 100px;
             max-height: 70px;
@@ -389,6 +390,11 @@ a {
         }
     }
 }
+//200923
+.desc_img {
+    height: 65px;
+    margin-top: -65px;
+}
 
 .day .postDesc,
 .entrylist .entrylistItemPostDesc,
@@ -396,10 +402,10 @@ a {
     font-size: 13px;
     font-weight: 300;
     padding-right: 0px;
-    color: @blog-font-color  !important;
-
+    color: #a2a2a2  !important;
+    text-align: left !important;
     a {
-        color: @blog-font-color;
+        color: #a2a2a2;
     }
 }
 
@@ -416,7 +422,8 @@ a {
 .postHeader(@fontSize) {
     font-size: @fontSize  !important;
     color: @blog-font-color;
-
+    margin-top: 30px !important;
+    margin-bottom: 10px !important;
     a:not([class='esa-anchor']) {
         color: inherit !important;
         text-decoration: underline;
@@ -454,27 +461,27 @@ a {
         }
 
         h1 {
-            .postHeader(21px);
-        }
-
-        h2 {
             .postHeader(20px);
         }
 
-        h3 {
+        h2 {
             .postHeader(19px);
         }
 
-        h4 {
-            .postHeader(18px);
-        }
-
-        h5 {
+        h3 {
             .postHeader(17px);
         }
 
-        h6 {
+        h4 {
+            .postHeader(17px);
+        }
+
+        h5 {
             .postHeader(16px);
+        }
+
+        h6 {
+            .postHeader(15px);
         }
 
         p {
@@ -492,7 +499,7 @@ a {
             border: none;
             color: @blog-font-color;
             margin: 20px 0;
-            padding: 0 0 0 10px;
+            padding: 1px 22px;
             min-height: 20px;
             background: transparent;
             line-height: inherit;
@@ -699,6 +706,7 @@ a {
 .cnblogs-markdown pre {
     white-space: pre !important;
     position: relative !important;
+    //box-shadow: rgba(0, 0, 0, 0.55) 0px 2px 10px;//200923
 }
 
 .cnblogs-markdown p a {

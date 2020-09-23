@@ -89,6 +89,7 @@
             if (options) {
                 $.extend(true, this.defaluts, options);
             }
+            this.addArticleLogo();
             this.buildCustomElements();
             this.buildGithubCorner();
             this.buildCopyright();
@@ -460,6 +461,16 @@
                         </svg>
                     </a>`);
             }
+        }
+        
+        /*
+        * 添加文章logo
+        */
+        addArticleLogo(){
+            var $c_b_p_descs= $('.c_b_p_desc');
+            $.each($c_b_p_descs,(index,c_b_p_desc)=>{
+                $(c_b_p_desc).before($(c_b_p_desc).children('img'));
+            })
         }
 
         /**
